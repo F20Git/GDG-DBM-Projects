@@ -8,6 +8,8 @@ Raw-datas
 
 There are two types of economy system
 
-<h1>lol</h1>
+**Economy System - For Private Bots
+
+**Economy System - For Global Bots
 
 [Economy System](https://github.com/F20Git/GDG-DBM-Projects/tree/master/Economy%20System)
