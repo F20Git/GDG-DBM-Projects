@@ -1,0 +1,393 @@
+{
+  "name": "work",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "kMBmO",
+  "actions": [
+    {
+      "server": "0",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "ID",
+      "name": "Store Server Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "${tempVars(\"ID\")}bal",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "bal",
+      "name": "Store Member Data"
+    },
+    {
+      "storage": "1",
+      "varName": "what job",
+      "min": "1",
+      "max": "5",
+      "name": "Generate Random Number"
+    },
+    {
+      "storage": "1",
+      "varName": "what job",
+      "comparison": "2",
+      "value": "1",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "14",
+      "name": "Check Variable"
+    },
+    {
+      "comment": "McDonalds Work",
+      "color": "#e6e64f",
+      "name": "Comment"
+    },
+    {
+      "storage": "1",
+      "varName": "moneymade",
+      "min": "70",
+      "max": "400",
+      "name": "Generate Random Number"
+    },
+    {
+      "storage": "1",
+      "varName": "wrkhrs",
+      "min": "1",
+      "max": "7",
+      "name": "Generate Random Number"
+    },
+    {
+      "title": "You worked as a McDonalds Worker",
+      "author": "",
+      "color": "",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "emb",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "emb",
+      "message": "You made $ ${tempVars(\"moneymade\")} while working for ${tempVars(\"wrkhrs\")} hours",
+      "name": "Set Embed Description"
+    },
+    {
+      "FirstNumber": "${tempVars(\"bal\")}",
+      "info": "0",
+      "SecondNumber": "${tempVars(\"moneymade\")}",
+      "storage": "1",
+      "varName": "mny",
+      "name": "Basic Math Operation"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "${tempVars(\"ID\")}bal",
+      "changeType": "0",
+      "value": "tempVars(\"mny\")",
+      "name": "Control Member Data"
+    },
+    {
+      "storage": "1",
+      "varName": "emb",
+      "channel": "0",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "what job",
+      "comparison": "2",
+      "value": "2",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "24",
+      "name": "Check Variable"
+    },
+    {
+      "comment": "Teacher",
+      "color": "#e6e64f",
+      "name": "Comment"
+    },
+    {
+      "storage": "1",
+      "varName": "moneymade",
+      "min": "900",
+      "max": "3000",
+      "name": "Generate Random Number"
+    },
+    {
+      "storage": "1",
+      "varName": "wrkhrs",
+      "min": "3",
+      "max": "13",
+      "name": "Generate Random Number"
+    },
+    {
+      "title": "You worked as a Teacher",
+      "author": "",
+      "color": "",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "emb",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "emb",
+      "message": "You made $ ${tempVars(\"moneymade\")} while working for ${tempVars(\"wrkhrs\")} hours",
+      "name": "Set Embed Description"
+    },
+    {
+      "FirstNumber": "${tempVars(\"bal\")}",
+      "info": "0",
+      "SecondNumber": "${tempVars(\"moneymade\")}",
+      "storage": "1",
+      "varName": "mny",
+      "name": "Basic Math Operation"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "${tempVars(\"ID\")}bal",
+      "changeType": "0",
+      "value": "tempVars(\"mny\")",
+      "name": "Control Member Data"
+    },
+    {
+      "storage": "1",
+      "varName": "emb",
+      "channel": "0",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "what job",
+      "comparison": "2",
+      "value": "3",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "24",
+      "name": "Check Variable"
+    },
+    {
+      "comment": "Cashier",
+      "color": "#e6e64f",
+      "name": "Comment"
+    },
+    {
+      "storage": "1",
+      "varName": "moneymade",
+      "min": "150",
+      "max": "700",
+      "name": "Generate Random Number"
+    },
+    {
+      "storage": "1",
+      "varName": "wrkhrs",
+      "min": "3",
+      "max": "13",
+      "name": "Generate Random Number"
+    },
+    {
+      "title": "You worked as a Cashier",
+      "author": "",
+      "color": "",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "emb",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "emb",
+      "message": "You made $ ${tempVars(\"moneymade\")} while working for ${tempVars(\"wrkhrs\")} hours",
+      "name": "Set Embed Description"
+    },
+    {
+      "FirstNumber": "${tempVars(\"bal\")}",
+      "info": "0",
+      "SecondNumber": "${tempVars(\"moneymade\")}",
+      "storage": "1",
+      "varName": "mny",
+      "name": "Basic Math Operation"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "${tempVars(\"ID\")}bal",
+      "changeType": "0",
+      "value": "tempVars(\"mny\")",
+      "name": "Control Member Data"
+    },
+    {
+      "storage": "1",
+      "varName": "emb",
+      "channel": "0",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "what job",
+      "comparison": "2",
+      "value": "4",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "45",
+      "name": "Check Variable"
+    },
+    {
+      "comment": "Youtuber",
+      "color": "#e6e64f",
+      "name": "Comment"
+    },
+    {
+      "storage": "1",
+      "varName": "moneymade",
+      "min": "150",
+      "max": "2200",
+      "name": "Generate Random Number"
+    },
+    {
+      "storage": "1",
+      "varName": "wrkhrs",
+      "min": "1",
+      "max": "3",
+      "name": "Generate Random Number"
+    },
+    {
+      "title": "You worked as a Youtuber",
+      "author": "",
+      "color": "",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "emb",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "emb",
+      "message": "You made $ ${tempVars(\"moneymade\")} while posting ${tempVars(\"wrkhrs\")} videos",
+      "name": "Set Embed Description"
+    },
+    {
+      "FirstNumber": "${tempVars(\"bal\")}",
+      "info": "0",
+      "SecondNumber": "${tempVars(\"moneymade\")}",
+      "storage": "1",
+      "varName": "mny",
+      "name": "Basic Math Operation"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "${tempVars(\"ID\")}bal",
+      "changeType": "0",
+      "value": "tempVars(\"mny\")",
+      "name": "Control Member Data"
+    },
+    {
+      "storage": "1",
+      "varName": "emb",
+      "channel": "0",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "comment": "Manager",
+      "color": "#e6e64f",
+      "name": "Comment"
+    },
+    {
+      "storage": "1",
+      "varName": "moneymade",
+      "min": "700",
+      "max": "10000",
+      "name": "Generate Random Number"
+    },
+    {
+      "storage": "1",
+      "varName": "wrkhrs",
+      "min": "3",
+      "max": "13",
+      "name": "Generate Random Number"
+    },
+    {
+      "title": "You worked as a Manager",
+      "author": "",
+      "color": "",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "emb",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "emb",
+      "message": "You made $ ${tempVars(\"moneymade\")} while working for ${tempVars(\"wrkhrs\")} hours",
+      "name": "Set Embed Description"
+    },
+    {
+      "FirstNumber": "${tempVars(\"bal\")}",
+      "info": "0",
+      "SecondNumber": "${tempVars(\"moneymade\")}",
+      "storage": "1",
+      "varName": "mny",
+      "name": "Basic Math Operation"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "${tempVars(\"ID\")}bal",
+      "changeType": "0",
+      "value": "tempVars(\"mny\")",
+      "name": "Control Member Data"
+    },
+    {
+      "storage": "1",
+      "varName": "emb",
+      "channel": "0",
+      "varName2": "",
+      "name": "Send Embed Message"
+    }
+  ]
+}

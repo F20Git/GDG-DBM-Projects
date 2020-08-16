@@ -1,0 +1,77 @@
+{
+  "name": "addmoney",
+  "permissions": "ADMINISTRATOR",
+  "restriction": "1",
+  "_id": "TTNQU",
+  "actions": [
+    {
+      "server": "0",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "Id",
+      "name": "Store Server Info"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "${tempVars(\"Id\")}bal",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "bal",
+      "name": "Store Member Data"
+    },
+    {
+      "info": "0",
+      "infoIndex": "2",
+      "storage": "1",
+      "varName": "amount",
+      "name": "Store Command Params"
+    },
+    {
+      "condition": "0",
+      "comparison": "0",
+      "value": "2",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "9",
+      "name": "Check Parameters"
+    },
+    {
+      "FirstNumber": "${tempVars(\"bal\")}",
+      "info": "0",
+      "SecondNumber": "${tempVars(\"amount\")}",
+      "storage": "1",
+      "varName": "balnow",
+      "name": "Basic Math Operation"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "${tempVars(\"Id\")}bal",
+      "changeType": "0",
+      "value": "tempVars(\"balnow\")",
+      "name": "Control Member Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Added **$${tempVars(\"amount\")}** To Wallet\n\n**__Your Balance details__**\n**Wallet: $${tempVars(\"bal\")}**\n**Current Wallet: $${tempVars(\"balnow\")}**\n\n",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**Please mention user/amount**\n\n`>addmoney (@user) (money to add)`",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ]
+}
