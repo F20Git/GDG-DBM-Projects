@@ -1,0 +1,88 @@
+{
+  "name": "beg",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "UDzOk",
+  "actions": [
+    {
+      "behavior": "1",
+      "interpretation": "0",
+      "code": "if (msg.guild.talkedNo === undefined) {\nmsg.guild.talkedNo = new Set();\n}\n if (msg.guild.talkedNo.has(msg.author.id)) {\n    msg.channel.send(\"**Do Not Hurry .Beg is On Cooldown For a Minute.**\");\n    console.log(\"test\");\n } else {\n     \n        msg.guild.talkedNo.add(msg.author.id);\n        setTimeout(() => {\n        \n          msg.guild.talkedNo.delete(msg.author.id);\n        }, 60000);\n        Actions.callNextAction(cache);\n    }",
+      "storage": "0",
+      "varName": "",
+      "name": "Run Script"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "money",
+      "defaultVal": "0",
+      "storage": "3",
+      "varName2": "bal",
+      "name": "Store Member Data"
+    },
+    {
+      "storage": "1",
+      "varName": "choise",
+      "min": "1",
+      "max": "10",
+      "name": "Generate Random Number"
+    },
+    {
+      "storage": "1",
+      "varName": "choise",
+      "comparison": "4",
+      "value": "5",
+      "iftrue": "2",
+      "iftrueVal": "6",
+      "iffalse": "2",
+      "iffalseVal": "11",
+      "name": "Check Variable"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "money",
+      "min": "100",
+      "max": "1000",
+      "name": "Generate Random Number"
+    },
+    {
+      "FirstNumber": "${tempVars(\"money\")}",
+      "info": "0",
+      "SecondNumber": "${globalVars(\"bal\")}",
+      "storage": "1",
+      "varName": "added",
+      "name": "Basic Math Operation"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "money",
+      "changeType": "0",
+      "value": "tempVars(\"added\")",
+      "name": "Control Member Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Anonymous🕵️‍♀️ Has been Donated $${tempVars(\"money\")}.",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Sorry Nothing To Give You.",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ]
+}
