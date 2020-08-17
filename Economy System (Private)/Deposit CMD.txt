@@ -1,0 +1,274 @@
+{
+  "name": "deposit",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "kzvRG",
+  "actions": [
+    {
+      "server": "0",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "ID",
+      "name": "Store Server Info"
+    },
+    {
+      "condition": "0",
+      "comparison": "0",
+      "value": "1",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "27",
+      "name": "Check Parameters"
+    },
+    {
+      "info": "0",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "transfer",
+      "name": "Store Command Params"
+    },
+    {
+      "storage": "1",
+      "varName": "transfer",
+      "comparison": "2",
+      "value": "all",
+      "iftrue": "2",
+      "iftrueVal": "17",
+      "iffalse": "2",
+      "iffalseVal": "6",
+      "name": "Check Variable"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "${tempVars(\"ID\")}bal",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "isenouh?",
+      "name": "Store Member Data"
+    },
+    {
+      "storage": "1",
+      "varName": "transfer",
+      "comparison": "3",
+      "value": "tempVars(\"isenouh?\")",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "31",
+      "name": "Check Variable"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "${tempVars(\"ID\")}bank",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "banknow",
+      "name": "Store Member Data"
+    },
+    {
+      "FirstNumber": "${tempVars(\"transfer\")}",
+      "info": "0",
+      "SecondNumber": "${tempVars(\"banknow\")}",
+      "storage": "1",
+      "varName": "nowadd",
+      "name": "Basic Math Operation"
+    },
+    {
+      "FirstNumber": "${tempVars(\"isenouh?\")}",
+      "info": "1",
+      "SecondNumber": "${tempVars(\"transfer\")}",
+      "storage": "1",
+      "varName": "nowbal",
+      "name": "Basic Math Operation"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "${tempVars(\"ID\")}bal",
+      "changeType": "0",
+      "value": "tempVars(\"nowbal\")",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "${tempVars(\"ID\")}bank",
+      "changeType": "0",
+      "value": "tempVars(\"nowadd\")",
+      "name": "Control Member Data"
+    },
+    {
+      "title": "Money Deposited",
+      "author": "",
+      "color": "RANDOM",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "embed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "message": "$${tempVars(\"transfer\")} Has been Deposited.\n\n💰Wallet:$${tempVars(\"nowbal\")}\n\n🏦BanK:$${tempVars(\"nowadd\")}",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "channel": "0",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "${tempVars(\"ID\")}bal",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "allbal",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "${tempVars(\"ID\")}bank",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "allbanknow",
+      "name": "Store Member Data"
+    },
+    {
+      "FirstNumber": "${tempVars(\"allbal\")}",
+      "info": "0",
+      "SecondNumber": "${tempVars(\"allbanknow\")}",
+      "storage": "1",
+      "varName": "nowalladd",
+      "name": "Basic Math Operation"
+    },
+    {
+      "FirstNumber": "${tempVars(\"allbal\")}",
+      "info": "1",
+      "SecondNumber": "${tempVars(\"allbal\")}",
+      "storage": "1",
+      "varName": "nowallbal",
+      "name": "Basic Math Operation"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "${tempVars(\"ID\")}bal",
+      "changeType": "0",
+      "value": "tempVars(\"nowallbal\")",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "${tempVars(\"ID\")}bank",
+      "changeType": "0",
+      "value": "tempVars(\"nowalladd\")",
+      "name": "Control Member Data"
+    },
+    {
+      "title": "Money Deposited",
+      "author": "",
+      "color": "RANDOM",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "embed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "message": "$${tempVars(\"allbal\")} Has been Deposited.\n\n💰Wallet:$${tempVars(\"nowallbal\")}\n\n🏦BanK:$${tempVars(\"nowalladd\")}",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "channel": "0",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "title": "Deposit Error",
+      "author": "",
+      "color": "RANDOM",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "emb2",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "emb2",
+      "message": "Please Enter Valid Amount To Deposit",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "emb2",
+      "channel": "0",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "title": "Deposit Error",
+      "author": "",
+      "color": "RANDOM",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "emb3",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "emb3",
+      "message": "Sorry! You Do not Have Enough Balance to deposit\n\nUsage = `>deposit (amount)`",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "emb3",
+      "channel": "0",
+      "varName2": "",
+      "name": "Send Embed Message"
+    }
+  ],
+  "_aliases": [
+    "dep"
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "name": "ping",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "nffXq",
+  "actions": [
+    {
+      "condition": "1",
+      "comparison": "0",
+      "value": "1",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "1",
+      "iffalseVal": "",
+      "name": "Check Parameters"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "storage": "1",
+      "varName2": "Cyborg 3.0",
+      "name": "Get Bot as Member"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "info": "0",
+      "storage": "1",
+      "varName2": "abc",
+      "name": "Store Member Info"
+    },
+    {
+      "storage": "1",
+      "varName": "Cyborg 3.0",
+      "comparison": "1",
+      "value": "tempVars(\"abc\")",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "1",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Message from ${tempVars(\"Cyborg 3.0\")}\nSorry ${member.displayName} Don't want to help you right now, all my bits are messed up and I feel lazy.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    }
+  ],
+  "comType": "3"
+}

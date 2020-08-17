@@ -1,0 +1,64 @@
+{
+  "name": "setmoney",
+  "permissions": "ADMINISTRATOR",
+  "restriction": "1",
+  "_id": "TTNQU",
+  "actions": [
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "money",
+      "defaultVal": "0",
+      "storage": "3",
+      "varName2": "bal",
+      "name": "Store Member Data"
+    },
+    {
+      "info": "0",
+      "infoIndex": "2",
+      "storage": "1",
+      "varName": "amount",
+      "name": "Store Command Params"
+    },
+    {
+      "condition": "0",
+      "comparison": "0",
+      "value": "2",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "7",
+      "name": "Check Parameters"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "money",
+      "changeType": "0",
+      "value": "tempVars(\"amount\")",
+      "name": "Control Member Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Wallet Set to **$${tempVars(\"amount\")}** \n\n**__Your Balance details__**\n**Wallet: $${globalVars(\"bal\")}**\n**Current Wallet: $${tempVars(\"amount\")}**\n\n",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**Please mention user/amount**\n\n`>setmoney (@user) (money to add)`",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ],
+  "_aliases": [
+    "setbal"
+  ]
+}

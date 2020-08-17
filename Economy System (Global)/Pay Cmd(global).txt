@@ -1,0 +1,142 @@
+{
+  "name": "pay",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "lgQkO",
+  "actions": [
+    {
+      "comment": "F20#1723",
+      "color": "#000000",
+      "name": "Comment"
+    },
+    {
+      "condition": "1",
+      "comparison": "0",
+      "value": "1",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "17",
+      "name": "Check Parameters"
+    },
+    {
+      "condition": "0",
+      "comparison": "0",
+      "value": "2",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "17",
+      "name": "Check Parameters"
+    },
+    {
+      "info": "0",
+      "infoIndex": "2",
+      "storage": "1",
+      "varName": "amntsteal",
+      "name": "Store Command Params"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "money",
+      "defaultVal": "0",
+      "storage": "3",
+      "varName2": "theirbal",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "money",
+      "defaultVal": "0",
+      "storage": "3",
+      "varName2": "urbal",
+      "name": "Store Member Data"
+    },
+    {
+      "storage": "1",
+      "varName": "amntsteal",
+      "comparison": "3",
+      "value": "globalVars(\"urbal\")",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "15",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "amntsteal",
+      "comparison": "3",
+      "value": "0",
+      "iftrue": "2",
+      "iftrueVal": "15",
+      "iffalse": "0",
+      "iffalseVal": "14",
+      "name": "Check Variable"
+    },
+    {
+      "FirstNumber": "${globalVars(\"theirbal\")}",
+      "info": "0",
+      "SecondNumber": "${tempVars(\"amntsteal\")}",
+      "storage": "1",
+      "varName": "theirbalnow",
+      "name": "Basic Math Operation"
+    },
+    {
+      "FirstNumber": "${globalVars(\"urbal\")}",
+      "info": "1",
+      "SecondNumber": "${tempVars(\"amntsteal\")}",
+      "storage": "1",
+      "varName": "urbalnow",
+      "name": "Basic Math Operation"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "money",
+      "changeType": "0",
+      "value": "tempVars(\"urbalnow\")",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "money",
+      "changeType": "0",
+      "value": "tempVars(\"theirbalnow\")",
+      "name": "Control Member Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "** You successfully payed ${mentionedUser}**",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "\n*You don't even have that much*",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "**Please mention a user to pay and the amount E.G:**\n>pay [@user] [amount]",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    }
+  ]
+}
