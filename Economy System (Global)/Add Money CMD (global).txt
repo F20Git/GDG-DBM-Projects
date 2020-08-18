@@ -5,6 +5,11 @@
   "_id": "TTNQU",
   "actions": [
     {
+      "storage": "0",
+      "varName": "",
+      "name": "Delete Message"
+    },
+    {
       "member": "0",
       "varName": "",
       "dataName": "money",

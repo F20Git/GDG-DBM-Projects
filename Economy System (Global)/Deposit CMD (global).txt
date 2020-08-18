@@ -104,7 +104,7 @@
       "url": "",
       "authorIcon": "",
       "imageUrl": "",
-      "thumbUrl": "",
+      "thumbUrl": "https://media.giphy.com/media/W56iRg3BTRZJvzKGu5/giphy.gif",
       "storage": "1",
       "varName": "embed",
       "name": "Create Embed Message"

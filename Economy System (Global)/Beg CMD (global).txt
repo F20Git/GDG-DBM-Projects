@@ -5,9 +5,14 @@
   "_id": "UDzOk",
   "actions": [
     {
+      "storage": "0",
+      "varName": "",
+      "name": "Delete Message"
+    },
+    {
       "behavior": "1",
       "interpretation": "0",
-      "code": "if (msg.guild.talkedNo === undefined) {\nmsg.guild.talkedNo = new Set();\n}\n if (msg.guild.talkedNo.has(msg.author.id)) {\n    msg.channel.send(\"**Do Not Hurry .Beg is On Cooldown For a Minute.**\");\n    console.log(\"test\");\n } else {\n     \n        msg.guild.talkedNo.add(msg.author.id);\n        setTimeout(() => {\n        \n          msg.guild.talkedNo.delete(msg.author.id);\n        }, 60000);\n        Actions.callNextAction(cache);\n    }",
+      "code": "if (msg.guild.talkedMe === undefined) {\nmsg.guild.talkedMe = new Set();\n}\n if (msg.guild.talkedMe.has(msg.author.id)) {\n    msg.channel.send(\"**Do Not Hurry. Beg is On Cooldown For a Minute.**\");\n    console.log(\"test\");\n } else {\n     \n        msg.guild.talkedMe.add(msg.author.id);\n        setTimeout(() => {\n        \n          msg.guild.talkedMe.delete(msg.author.id);\n        }, 60000);\n        Actions.callNextAction(cache);\n    }",
       "storage": "0",
       "varName": "",
       "name": "Run Script"
@@ -34,9 +39,9 @@
       "comparison": "4",
       "value": "5",
       "iftrue": "2",
-      "iftrueVal": "6",
+      "iftrueVal": "7",
       "iffalse": "2",
-      "iffalseVal": "11",
+      "iffalseVal": "14",
       "name": "Check Variable"
     },
     {
@@ -66,23 +71,59 @@
       "name": "Control Member Data"
     },
     {
-      "channel": "0",
-      "varName": "",
+      "title": "Donation Recived",
+      "author": "",
+      "color": "RANDOM",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "https://media.giphy.com/media/ADgfsbHcS62Jy/giphy.gif",
+      "storage": "1",
+      "varName": "emb",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "emb",
       "message": "Anonymous🕵️‍♀️ Has been Donated $${tempVars(\"money\")}.",
-      "storage": "0",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "emb",
+      "channel": "0",
       "varName2": "",
-      "name": "Send Message"
+      "name": "Send Embed Message"
     },
     {
       "name": "End Action Sequence"
     },
     {
+      "title": "Donation Failed",
+      "author": "",
+      "color": "RANDOM",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "https://media.giphy.com/media/cKPViLWvlFwpVDiQhS/giphy.gif",
+      "storage": "1",
+      "varName": "emp2",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "emp2",
+      "message": "Sorry Nothing to Give you",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "emp2",
       "channel": "0",
-      "varName": "",
-      "message": "Sorry Nothing To Give You.",
-      "storage": "0",
       "varName2": "",
-      "name": "Send Message"
+      "name": "Send Embed Message"
     }
   ]
 }

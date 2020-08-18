@@ -20,21 +20,11 @@
       "name": "Check Parameters"
     },
     {
-      "condition": "0",
-      "comparison": "0",
-      "value": "2",
-      "iftrue": "0",
-      "iftrueVal": "",
-      "iffalse": "2",
-      "iffalseVal": "20",
-      "name": "Check Parameters"
-    },
-    {
-      "info": "0",
-      "infoIndex": "2",
       "storage": "1",
       "varName": "amntsteal",
-      "name": "Store Command Params"
+      "min": "100",
+      "max": "1000",
+      "name": "Generate Random Number"
     },
     {
       "member": "0",
@@ -78,7 +68,7 @@
       "comparison": "4",
       "value": "4",
       "iftrue": "2",
-      "iftrueVal": "16",
+      "iftrueVal": "18",
       "iffalse": "0",
       "iffalseVal": "",
       "name": "Check Variable"
@@ -116,9 +106,35 @@
       "name": "Control Member Data"
     },
     {
+      "title": "Robbery Sucsess",
+      "author": "",
+      "color": "RANDOM",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "https://media.giphy.com/media/5QMOICVmXremPSa0k7/giphy.gif",
+      "storage": "1",
+      "varName": "emb",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "emb",
+      "message": "${member} Have Successfully Robbed **$${tempVars(\"amntsteal\")}** from ${mentionedUser}  ",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "emb",
       "channel": "0",
+      "varName2": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "channel": "2",
       "varName": "",
-      "message": "** You successfully robbed ${mentionedUser}**",
+      "message": "${member} Has Robbed **$${tempVars(\"amntsteal\")}** From You\n\nServer = ${server}\n",
       "storage": "0",
       "varName2": "",
       "name": "Send Message"
@@ -140,18 +156,7 @@
     {
       "channel": "0",
       "varName": "",
-      "message": "**YOUR STUPID!**\n*They don't even have that much*",
-      "storage": "0",
-      "varName2": "",
-      "name": "Send Message"
-    },
-    {
-      "name": "End Action Sequence"
-    },
-    {
-      "channel": "0",
-      "varName": "",
-      "message": "**Please mention a user to rob and the amount E.G:**\n>rob [@user] [amount]",
+      "message": "**Please mention a user to rob and the amount E.G:**\n`>rob [@user]`",
       "storage": "0",
       "varName2": "",
       "name": "Send Message"

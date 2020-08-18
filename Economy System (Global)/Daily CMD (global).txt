@@ -1,0 +1,81 @@
+{
+  "name": "daily",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "tIBgc",
+  "actions": [
+    {
+      "storage": "0",
+      "varName": "",
+      "name": "Delete Message"
+    },
+    {
+      "behavior": "1",
+      "interpretation": "0",
+      "code": "if (msg.guild.talkedNo === undefined) {\nmsg.guild.talkedNo = new Set();\n}\n if (msg.guild.talkedNo.has(msg.author.id)) {\n    msg.channel.send(\"**You have already claimed Daily Reward. Come back after 24hr.**\");\n    console.log(\"test\");\n } else {\n     \n        msg.guild.talkedNo.add(msg.author.id);\n        setTimeout(() => {\n        \n          msg.guild.talkedNo.delete(msg.author.id);\n        }, 86400000);\n        Actions.callNextAction(cache);\n    }",
+      "storage": "0",
+      "varName": "",
+      "name": "Run Script"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "money",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "geld1",
+      "name": "Store Member Data"
+    },
+    {
+      "FirstNumber": "${tempVars(\"geld1\")}",
+      "info": "0",
+      "SecondNumber": "1500",
+      "storage": "1",
+      "varName": "geldresult",
+      "name": "Basic Math Operation"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "money",
+      "changeType": "0",
+      "value": "tempVars(\"geldresult\")",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "money",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "geld2",
+      "name": "Store Member Data"
+    },
+    {
+      "title": "Daily Reward",
+      "author": "",
+      "color": "RANDOM",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "",
+      "thumbUrl": "https://media1.tenor.com/images/ddd7ad20856d06ca826715dd1391348b/tenor.gif?itemid=16181596",
+      "storage": "1",
+      "varName": "emb",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "emb",
+      "message": "${member},\n\nYou have Recieved Your Daily Reward **$ 1500 **.\nYour current account balance is **$ ${tempVars(\"geld2\")}**",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "emb",
+      "channel": "0",
+      "varName2": "",
+      "name": "Send Embed Message"
+    }
+  ]
+}

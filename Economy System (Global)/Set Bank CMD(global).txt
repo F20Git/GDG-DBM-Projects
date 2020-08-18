@@ -5,6 +5,11 @@
   "_id": "XzIun",
   "actions": [
     {
+      "storage": "0",
+      "varName": "",
+      "name": "Delete Message"
+    },
+    {
       "member": "0",
       "varName": "",
       "dataName": "bank",
@@ -27,7 +32,7 @@
       "iftrue": "0",
       "iftrueVal": "",
       "iffalse": "2",
-      "iffalseVal": "7",
+      "iffalseVal": "8",
       "name": "Check Parameters"
     },
     {
