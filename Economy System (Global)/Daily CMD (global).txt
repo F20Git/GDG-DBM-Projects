@@ -12,7 +12,7 @@
     {
       "behavior": "1",
       "interpretation": "0",
-      "code": "if (msg.guild.talkedNo === undefined) {\nmsg.guild.talkedNo = new Set();\n}\n if (msg.guild.talkedNo.has(msg.author.id)) {\n    msg.channel.send(\"**You have already claimed Daily Reward. Come back after 24hr.**\");\n    console.log(\"test\");\n } else {\n     \n        msg.guild.talkedNo.add(msg.author.id);\n        setTimeout(() => {\n        \n          msg.guild.talkedNo.delete(msg.author.id);\n        }, 86400000);\n        Actions.callNextAction(cache);\n    }",
+      "code": "if (msg.client.guilds.daily === undefined) {\nmsg.client.guilds.daily = new Set();\n}\n if (msg.client.guilds.daily.has(msg.author.id)) {\n    msg.channel.send(\"**You have already claimed Daily Reward. Come back after 24hr.**\");\n    console.log(\"test\");\n } else {\n     \n        msg.client.guilds.daily.add(msg.author.id);\n        setTimeout(() => {\n        \n          msg.client.guilds.daily.delete(msg.author.id);\n        }, 86400000);\n        Actions.callNextAction(cache);\n    }",
       "storage": "0",
       "varName": "",
       "name": "Run Script"
@@ -29,7 +29,7 @@
     {
       "FirstNumber": "${tempVars(\"geld1\")}",
       "info": "0",
-      "SecondNumber": "1500",
+      "SecondNumber": "2500",
       "storage": "1",
       "varName": "geldresult",
       "name": "Basic Math Operation"
@@ -67,7 +67,7 @@
     {
       "storage": "1",
       "varName": "emb",
-      "message": "${member},\n\nYou have Recieved Your Daily Reward **$ 1500 **.\nYour current account balance is **$ ${tempVars(\"geld2\")}**",
+      "message": "${member},\n\nYou have Recieved Your Daily Reward **$ 2500 **.\nYour current account balance is **$ ${tempVars(\"geld2\")}**",
       "name": "Set Embed Description"
     },
     {
@@ -77,5 +77,6 @@
       "varName2": "",
       "name": "Send Embed Message"
     }
-  ]
+  ],
+  "comType": "0"
 }
