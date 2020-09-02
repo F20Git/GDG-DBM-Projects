@@ -33,6 +33,14 @@
       "name": "Store Member Data"
     },
     {
+      "FirstNumber": "${globalVars(\"bal\")}",
+      "info": "0",
+      "SecondNumber": "${globalVars(\"bank\")}",
+      "storage": "1",
+      "varName": "total",
+      "name": "Basic Math Operation"
+    },
+    {
       "title": "Your Balance:",
       "author": "",
       "color": "RANDOM",
@@ -48,7 +56,7 @@
     {
       "storage": "1",
       "varName": "emb",
-      "message": "**Balance of ${member}**\n\n💰Wallet: $ ${globalVars(\"bal\")}\n🏦Bank: $ ${globalVars(\"bank\")}",
+      "message": "**Balance of ${member}**\n\n💰Wallet: $ ${globalVars(\"bal\")}\n🏦Bank: $ ${globalVars(\"bank\")}\n\nTotal: $${tempVars(\"total\")}",
       "name": "Set Embed Description"
     },
     {
@@ -92,6 +100,14 @@
       "name": "Store Member Data"
     },
     {
+      "FirstNumber": "${globalVars(\"bal\")}",
+      "info": "0",
+      "SecondNumber": "${globalVars(\"bank\")}",
+      "storage": "1",
+      "varName": "total",
+      "name": "Basic Math Operation"
+    },
+    {
       "title": "Their Balance:",
       "author": "",
       "color": "RANDOM",
@@ -107,7 +123,7 @@
     {
       "storage": "1",
       "varName": "emb",
-      "message": "**Balance of ${mentionedUser}**\n\n💰Wallet: $ ${globalVars(\"bal\")}\n🏦Bank: $ ${globalVars(\"bank\")}",
+      "message": "**Balance of ${mentionedUser}**\n\n💰Wallet: $ ${globalVars(\"bal\")}\n🏦Bank: $ ${globalVars(\"bank\")}\n\nTotal: $${tempVars(\"total\")}",
       "name": "Set Embed Description"
     },
     {

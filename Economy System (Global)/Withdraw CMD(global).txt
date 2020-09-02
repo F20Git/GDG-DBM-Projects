@@ -191,7 +191,7 @@
     {
       "storage": "1",
       "varName": "embed",
-      "message": "$${globalVars(\"allbal\")} Has been Withdrawn.\n\n💰Wallet:$${tempVars(\"nowallbal\")}\n\n🏦BanK:$${tempVars(\"nowalladd\")}",
+      "message": "$${globalVars(\"allbanknow\")} Has been Withdrawn.\n\n💰Wallet:$${tempVars(\"nowallbal\")}\n\n🏦BanK:$${tempVars(\"nowalladd\")}",
       "name": "Set Embed Description"
     },
     {

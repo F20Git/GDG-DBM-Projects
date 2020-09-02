@@ -5,9 +5,12 @@
   "_id": "fvIUx",
   "actions": [
     {
-      "comment": "rob cmd",
-      "color": "#000000",
-      "name": "Comment"
+      "behavior": "1",
+      "interpretation": "0",
+      "code": "if (msg.client.guilds.rob === undefined) {\nmsg.client.guilds.rob = new Set();\n}\n if (msg.client.guilds.rob.has(msg.author.id)) {\n    msg.channel.send(\"**Robbery Failed**. You have Recently Robbed a User Try Again After a **Minute**\");\n    console.log(\"test\");\n } else {\n     \n        msg.client.guilds.rob.add(msg.author.id);\n        setTimeout(() => {\n        \n          msg.client.guilds.rob.delete(msg.author.id);\n        }, 60000);\n        Actions.callNextAction(cache);\n    }",
+      "storage": "0",
+      "varName": "",
+      "name": "Run Script"
     },
     {
       "condition": "1",
@@ -16,7 +19,7 @@
       "iftrue": "0",
       "iftrueVal": "",
       "iffalse": "2",
-      "iffalseVal": "20",
+      "iffalseVal": "21",
       "name": "Check Parameters"
     },
     {
@@ -52,8 +55,20 @@
       "iftrue": "0",
       "iftrueVal": "",
       "iffalse": "2",
-      "iffalseVal": "18",
+      "iffalseVal": "19",
       "name": "Check Variable"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "cop",
+      "comparison": "1",
+      "value": "1",
+      "iftrue": "2",
+      "iftrueVal": "19",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Member Data"
     },
     {
       "storage": "1",
@@ -65,10 +80,10 @@
     {
       "storage": "1",
       "varName": "Suc?",
-      "comparison": "4",
-      "value": "4",
+      "comparison": "3",
+      "value": "5",
       "iftrue": "2",
-      "iftrueVal": "18",
+      "iftrueVal": "19",
       "iffalse": "0",
       "iffalseVal": "",
       "name": "Check Variable"

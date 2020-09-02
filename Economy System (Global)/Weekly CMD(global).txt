@@ -1,8 +1,8 @@
 {
-  "name": "daily",
+  "name": "weekly",
   "permissions": "NONE",
   "restriction": "1",
-  "_id": "tIBgc",
+  "_id": "DnRRv",
   "actions": [
     {
       "storage": "0",
@@ -12,7 +12,7 @@
     {
       "behavior": "1",
       "interpretation": "0",
-      "code": "if (msg.client.guilds.daily === undefined) {\nmsg.client.guilds.daily = new Set();\n}\n if (msg.client.guilds.daily.has(msg.author.id)) {\n    msg.channel.send(\"**You have already claimed Daily Reward. Come back after 24hr.**\");\n    console.log(\"test\");\n } else {\n     \n        msg.client.guilds.daily.add(msg.author.id);\n        setTimeout(() => {\n        \n          msg.client.guilds.daily.delete(msg.author.id);\n        }, 86400000);\n        Actions.callNextAction(cache);\n    }",
+      "code": "if (msg.client.guilds.weekly === undefined) {\nmsg.client.guilds.weekly = new Set();\n}\n if (msg.client.guilds.weekly.has(msg.author.id)) {\n    msg.channel.send(\"**You have already claimed Weekly Reward. Come back after `7 Days`.**\");\n    console.log(\"test\");\n } else {\n     \n        msg.client.guilds.weekly.add(msg.author.id);\n        setTimeout(() => {\n        \n          msg.client.guilds.weekly.delete(msg.author.id);\n        }, 604800000);\n        Actions.callNextAction(cache);\n    }",
       "storage": "0",
       "varName": "",
       "name": "Run Script"
@@ -29,7 +29,7 @@
     {
       "FirstNumber": "${tempVars(\"geld1\")}",
       "info": "0",
-      "SecondNumber": "2500",
+      "SecondNumber": "25000",
       "storage": "1",
       "varName": "geldresult",
       "name": "Basic Math Operation"
@@ -52,7 +52,7 @@
       "name": "Store Member Data"
     },
     {
-      "title": "Daily Reward",
+      "title": "Weekly Reward",
       "author": "",
       "color": "RANDOM",
       "timestamp": "false",
@@ -67,7 +67,7 @@
     {
       "storage": "1",
       "varName": "emb",
-      "message": "${member},\n\nYou have Recieved Your Daily Reward **$ 2500 **.\nYour current account balance is **$ ${tempVars(\"geld2\")}**",
+      "message": "${member},\n\nYou have Recieved Your Weekly Reward **$ 25000 **.\nYour current account balance is **$ ${tempVars(\"geld2\")}**",
       "name": "Set Embed Description"
     },
     {
