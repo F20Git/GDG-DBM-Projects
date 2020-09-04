@@ -10,6 +10,18 @@
       "name": "Delete Message"
     },
     {
+      "server": "0",
+      "varName": "",
+      "dataName": "dail",
+      "comparison": "1",
+      "value": "1",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "12",
+      "name": "Check Server Data"
+    },
+    {
       "behavior": "1",
       "interpretation": "0",
       "code": "if (msg.client.guilds.daily === undefined) {\nmsg.client.guilds.daily = new Set();\n}\n if (msg.client.guilds.daily.has(msg.author.id)) {\n    msg.channel.send(\"**You have already claimed Daily Reward. Come back after 24hr.**\");\n    console.log(\"test\");\n } else {\n     \n        msg.client.guilds.daily.add(msg.author.id);\n        setTimeout(() => {\n        \n          msg.client.guilds.daily.delete(msg.author.id);\n        }, 86400000);\n        Actions.callNextAction(cache);\n    }",
@@ -29,7 +41,7 @@
     {
       "FirstNumber": "${tempVars(\"geld1\")}",
       "info": "0",
-      "SecondNumber": "2500",
+      "SecondNumber": "${serverVars(\"dailye\")}",
       "storage": "1",
       "varName": "geldresult",
       "name": "Basic Math Operation"
@@ -67,7 +79,7 @@
     {
       "storage": "1",
       "varName": "emb",
-      "message": "${member},\n\nYou have Recieved Your Daily Reward **$ 2500 **.\nYour current account balance is **$ ${tempVars(\"geld2\")}**",
+      "message": "${member},\n\nYou have Recieved Your Daily Reward **$${serverVars(\"dailye\")}**.\nYour current account balance is **$${tempVars(\"geld2\")}**",
       "name": "Set Embed Description"
     },
     {
@@ -76,6 +88,19 @@
       "channel": "0",
       "varName2": "",
       "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Daily Reward has Not Been Set\nPls type `>setdaily (amount)`",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
     }
   ],
   "comType": "0"

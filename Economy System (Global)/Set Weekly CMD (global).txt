@@ -1,0 +1,64 @@
+{
+  "name": "setweekly",
+  "permissions": "ADMINISTRATOR",
+  "restriction": "1",
+  "_id": "zJndA",
+  "actions": [
+    {
+      "info": "0",
+      "infoIndex": "1",
+      "storage": "2",
+      "varName": "weeklye",
+      "name": "Store Command Params"
+    },
+    {
+      "condition": "0",
+      "comparison": "0",
+      "value": "1",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "7",
+      "name": "Check Parameters"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Weekly Reward Has been Set as $${serverVars(\"weeklye\")}",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "storage": "2",
+      "varName": "weeklye",
+      "name": "Save Variable"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "week",
+      "changeType": "0",
+      "value": "1",
+      "name": "Control Server Data"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Sorry Please Type `>setweekly (amount)`",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    }
+  ]
+}

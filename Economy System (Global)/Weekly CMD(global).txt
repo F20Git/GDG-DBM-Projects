@@ -10,6 +10,18 @@
       "name": "Delete Message"
     },
     {
+      "server": "0",
+      "varName": "",
+      "dataName": "week",
+      "comparison": "1",
+      "value": "1",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "12",
+      "name": "Check Server Data"
+    },
+    {
       "behavior": "1",
       "interpretation": "0",
       "code": "if (msg.client.guilds.weekly === undefined) {\nmsg.client.guilds.weekly = new Set();\n}\n if (msg.client.guilds.weekly.has(msg.author.id)) {\n    msg.channel.send(\"**You have already claimed Weekly Reward. Come back after `7 Days`.**\");\n    console.log(\"test\");\n } else {\n     \n        msg.client.guilds.weekly.add(msg.author.id);\n        setTimeout(() => {\n        \n          msg.client.guilds.weekly.delete(msg.author.id);\n        }, 604800000);\n        Actions.callNextAction(cache);\n    }",
@@ -29,7 +41,7 @@
     {
       "FirstNumber": "${tempVars(\"geld1\")}",
       "info": "0",
-      "SecondNumber": "25000",
+      "SecondNumber": "${serverVars(\"weeklye\")}",
       "storage": "1",
       "varName": "geldresult",
       "name": "Basic Math Operation"
@@ -67,7 +79,7 @@
     {
       "storage": "1",
       "varName": "emb",
-      "message": "${member},\n\nYou have Recieved Your Weekly Reward **$ 25000 **.\nYour current account balance is **$ ${tempVars(\"geld2\")}**",
+      "message": "${member},\n\nYou have Recieved Your Weekly Reward **$${serverVars(\"weeklye\")}**.\nYour current account balance is **$ ${tempVars(\"geld2\")}**",
       "name": "Set Embed Description"
     },
     {
@@ -76,6 +88,19 @@
       "channel": "0",
       "varName2": "",
       "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Weekly Reward has Not Been Set\nPls type `>setweekly (amount)`",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
     }
   ],
   "comType": "0"
