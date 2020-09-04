@@ -1,7 +1,7 @@
 {
   "name": "setbank",
   "permissions": "ADMINISTRATOR",
-  "restriction": "4",
+  "restriction": "1",
   "_id": "XzIun",
   "actions": [
     {
