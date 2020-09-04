@@ -1,7 +1,7 @@
 {
   "name": "setmoney",
   "permissions": "ADMINISTRATOR",
-  "restriction": "4",
+  "restriction": "1",
   "_id": "TTNQU",
   "actions": [
     {
