@@ -1,0 +1,353 @@
+{
+  "name": "rank",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "phHdN",
+  "actions": [
+    {
+      "info": "0",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "ch",
+      "name": "Store Command Params"
+    },
+    {
+      "condition": "1",
+      "comparison": "0",
+      "value": "1",
+      "iftrue": "2",
+      "iftrueVal": "23",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Parameters"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "username",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "5",
+      "storage": "1",
+      "varName2": "tag",
+      "name": "Store Member Things"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "dics",
+      "name": "Store Member Info"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "ID",
+      "name": "Store Server Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "${tempVars(\"ID\")}level",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "level",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "${tempVars(\"ID\")}xp",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "xp",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "${tempVars(\"ID\")}xptop",
+      "defaultVal": "100",
+      "storage": "1",
+      "varName2": "xptop",
+      "name": "Store Member Data"
+    },
+    {
+      "FirstNumber": "${tempVars(\"xp\")}",
+      "info": "3",
+      "SecondNumber": "${tempVars(\"xptop\")}",
+      "storage": "1",
+      "varName": "percent1",
+      "name": "Math Operation Plus"
+    },
+    {
+      "FirstNumber": "${tempVars(\"percent1\")}",
+      "info": "2",
+      "SecondNumber": "100",
+      "storage": "1",
+      "varName": "percent2",
+      "name": "Math Operation Plus"
+    },
+    {
+      "FirstNumber": "${tempVars(\"percent2\")}",
+      "info": "4",
+      "SecondNumber": "100",
+      "storage": "1",
+      "varName": "percent",
+      "name": "Math Operation Plus"
+    },
+    {
+      "url": "resources/4.png",
+      "storage": "1",
+      "varName": "image",
+      "name": "Create Image"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "storage": "1",
+      "varName2": "cass",
+      "name": "Create Image from Avatar"
+    },
+    {
+      "storage": "1",
+      "varName": "cass",
+      "width": "150",
+      "height": "150",
+      "name": "Resize Image"
+    },
+    {
+      "storage": "1",
+      "varName": "image",
+      "width": "583",
+      "height": "187",
+      "name": "Resize Image"
+    },
+    {
+      "storage": "1",
+      "varName": "image",
+      "x": "25",
+      "y": "23",
+      "font": "fonts/Areal.fnt",
+      "width": "",
+      "text": "${tempVars(\"username\")}#${tempVars(\"tag\")}",
+      "name": "Draw Text on Image"
+    },
+    {
+      "storage": "1",
+      "varName": "image",
+      "x": "25",
+      "y": "68",
+      "font": "fonts/Areal.fnt",
+      "width": "",
+      "text": "Level: ${tempVars(\"level\")}",
+      "name": "Draw Text on Image"
+    },
+    {
+      "storage": "1",
+      "varName": "image",
+      "storage2": "1",
+      "varName2": "cass",
+      "x": "402",
+      "y": "13",
+      "mask": "0",
+      "name": "Draw Image on Image"
+    },
+    {
+      "storage": "1",
+      "varName": "image",
+      "x": "25",
+      "y": "113",
+      "font": "fonts/Areal.fnt",
+      "width": "",
+      "text": "${tempVars(\"xp\")} / ${tempVars(\"xptop\")} XP (${tempVars(\"percent\")}%)",
+      "name": "Draw Text on Image"
+    },
+    {
+      "storage": "1",
+      "varName": "image",
+      "channel": "0",
+      "varName2": "",
+      "message": "",
+      "compress": "9",
+      "spoiler": "0",
+      "storage2": "0",
+      "varName3": "",
+      "name": "Send Image"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "username",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "info": "5",
+      "storage": "1",
+      "varName2": "tag",
+      "name": "Store Member Things"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "dics",
+      "name": "Store Member Info"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "ID",
+      "name": "Store Server Info"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "${tempVars(\"ID\")}level",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "level",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "${tempVars(\"ID\")}xp",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "xp",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "${tempVars(\"ID\")}xptop",
+      "defaultVal": "100",
+      "storage": "1",
+      "varName2": "xptop",
+      "name": "Store Member Data"
+    },
+    {
+      "FirstNumber": "${tempVars(\"xp\")}",
+      "info": "3",
+      "SecondNumber": "${tempVars(\"xptop\")}",
+      "storage": "1",
+      "varName": "percent1",
+      "name": "Math Operation Plus"
+    },
+    {
+      "FirstNumber": "${tempVars(\"percent1\")}",
+      "info": "2",
+      "SecondNumber": "100",
+      "storage": "1",
+      "varName": "percent2",
+      "name": "Math Operation Plus"
+    },
+    {
+      "FirstNumber": "${tempVars(\"percent2\")}",
+      "info": "4",
+      "SecondNumber": "100",
+      "storage": "1",
+      "varName": "percent",
+      "name": "Math Operation Plus"
+    },
+    {
+      "url": "resources/4.png",
+      "storage": "1",
+      "varName": "image",
+      "name": "Create Image"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "storage": "1",
+      "varName2": "cass",
+      "name": "Create Image from Avatar"
+    },
+    {
+      "storage": "1",
+      "varName": "cass",
+      "width": "150",
+      "height": "150",
+      "name": "Resize Image"
+    },
+    {
+      "storage": "1",
+      "varName": "image",
+      "width": "583",
+      "height": "187",
+      "name": "Resize Image"
+    },
+    {
+      "storage": "1",
+      "varName": "image",
+      "x": "25",
+      "y": "23",
+      "font": "fonts/Areal.fnt",
+      "width": "",
+      "text": "${tempVars(\"username\")}#${tempVars(\"tag\")}",
+      "name": "Draw Text on Image"
+    },
+    {
+      "storage": "1",
+      "varName": "image",
+      "x": "25",
+      "y": "68",
+      "font": "fonts/Areal.fnt",
+      "width": "",
+      "text": "Level: ${tempVars(\"level\")}",
+      "name": "Draw Text on Image"
+    },
+    {
+      "storage": "1",
+      "varName": "image",
+      "storage2": "1",
+      "varName2": "cass",
+      "x": "402",
+      "y": "13",
+      "mask": "0",
+      "name": "Draw Image on Image"
+    },
+    {
+      "storage": "1",
+      "varName": "image",
+      "x": "25",
+      "y": "113",
+      "font": "fonts/Areal.fnt",
+      "width": "",
+      "text": "${tempVars(\"xp\")} / ${tempVars(\"xptop\")} XP (${tempVars(\"percent\")}%)",
+      "name": "Draw Text on Image"
+    },
+    {
+      "storage": "1",
+      "varName": "image",
+      "channel": "0",
+      "varName2": "",
+      "message": "",
+      "compress": "9",
+      "spoiler": "0",
+      "storage2": "0",
+      "varName3": "",
+      "name": "Send Image"
+    }
+  ],
+  "comType": "0"
+}

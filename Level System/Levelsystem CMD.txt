@@ -1,0 +1,359 @@
+{
+  "name": "level",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "bZZhP",
+  "actions": [
+    {
+      "member": "1",
+      "varName": "",
+      "info": "0",
+      "storage": "1",
+      "varName2": "mem",
+      "name": "Store Member Info"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "ID",
+      "name": "Store Server Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "${tempVars(\"ID\")}level",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "level",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "${tempVars(\"ID\")}xp",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "xp",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "${tempVars(\"ID\")}xptop",
+      "defaultVal": "150",
+      "storage": "1",
+      "varName2": "xptop",
+      "name": "Store Member Data"
+    },
+    {
+      "storage": "1",
+      "varName": "xp",
+      "comparison": "14",
+      "value": "tempVars(\"xptop\")",
+      "iftrue": "2",
+      "iftrueVal": "12",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "xp2",
+      "min": "30",
+      "max": "70",
+      "name": "Generate Random Number"
+    },
+    {
+      "FirstNumber": "${tempVars(\"xp\")}",
+      "info": "0",
+      "SecondNumber": "${tempVars(\"xp2\")}",
+      "storage": "1",
+      "varName": "newxp",
+      "name": "Basic Math Operation"
+    },
+    {
+      "storage": "1",
+      "varName": "newxp",
+      "comparison": "14",
+      "value": "tempVars(\"xptop\")",
+      "iftrue": "2",
+      "iftrueVal": "12",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "${tempVars(\"ID\")}xp",
+      "changeType": "0",
+      "value": "tempVars(\"newxp\")",
+      "name": "Control Member Data"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "${tempVars(\"ID\")}xp",
+      "changeType": "0",
+      "value": "0",
+      "name": "Control Member Data"
+    },
+    {
+      "FirstNumber": "${tempVars(\"xptop\")}",
+      "info": "0",
+      "SecondNumber": "150",
+      "storage": "1",
+      "varName": "topxp",
+      "name": "Basic Math Operation"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "${tempVars(\"ID\")}xptop",
+      "changeType": "0",
+      "value": "tempVars(\"topxp\")",
+      "name": "Control Member Data"
+    },
+    {
+      "FirstNumber": "${tempVars(\"level\")}",
+      "info": "0",
+      "SecondNumber": "1",
+      "storage": "1",
+      "varName": "newlevel",
+      "name": "Basic Math Operation"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "${tempVars(\"ID\")}level",
+      "changeType": "0",
+      "value": "tempVars(\"newlevel\")",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "0",
+      "storage": "1",
+      "varName2": "memo",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "username",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "5",
+      "storage": "1",
+      "varName2": "tag",
+      "name": "Store Member Things"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "dics",
+      "name": "Store Member Info"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "ID",
+      "name": "Store Server Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "${tempVars(\"ID\")}level",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "level",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "${tempVars(\"ID\")}xp",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "xp",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "${tempVars(\"ID\")}xptop",
+      "defaultVal": "100",
+      "storage": "1",
+      "varName2": "xptop",
+      "name": "Store Member Data"
+    },
+    {
+      "FirstNumber": "${tempVars(\"xp\")}",
+      "info": "3",
+      "SecondNumber": "${tempVars(\"xptop\")}",
+      "storage": "1",
+      "varName": "percent1",
+      "name": "Math Operation Plus"
+    },
+    {
+      "FirstNumber": "${tempVars(\"percent1\")}",
+      "info": "2",
+      "SecondNumber": "100",
+      "storage": "1",
+      "varName": "percent2",
+      "name": "Math Operation Plus"
+    },
+    {
+      "FirstNumber": "${tempVars(\"percent2\")}",
+      "info": "4",
+      "SecondNumber": "100",
+      "storage": "1",
+      "varName": "percent",
+      "name": "Math Operation Plus"
+    },
+    {
+      "url": "resources/4.png",
+      "storage": "1",
+      "varName": "image",
+      "name": "Create Image"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "storage": "1",
+      "varName2": "cass",
+      "name": "Create Image from Avatar"
+    },
+    {
+      "storage": "1",
+      "varName": "cass",
+      "width": "150",
+      "height": "150",
+      "name": "Resize Image"
+    },
+    {
+      "storage": "1",
+      "varName": "image",
+      "width": "583",
+      "height": "187",
+      "name": "Resize Image"
+    },
+    {
+      "storage": "1",
+      "varName": "image",
+      "x": "25",
+      "y": "23",
+      "font": "fonts/Areal.fnt",
+      "width": "",
+      "text": "${tempVars(\"username\")}#${tempVars(\"tag\")}",
+      "name": "Draw Text on Image"
+    },
+    {
+      "storage": "1",
+      "varName": "image",
+      "x": "25",
+      "y": "68",
+      "font": "fonts/Areal.fnt",
+      "width": "",
+      "text": "Level: ${tempVars(\"level\")}",
+      "name": "Draw Text on Image"
+    },
+    {
+      "storage": "1",
+      "varName": "image",
+      "storage2": "1",
+      "varName2": "cass",
+      "x": "402",
+      "y": "13",
+      "mask": "0",
+      "name": "Draw Image on Image"
+    },
+    {
+      "storage": "1",
+      "varName": "image",
+      "x": "25",
+      "y": "113",
+      "font": "fonts/Areal.fnt",
+      "width": "",
+      "text": "${tempVars(\"xp\")} / ${tempVars(\"xptop\")} XP (${tempVars(\"percent\")}%)",
+      "name": "Draw Text on Image"
+    },
+    {
+      "storage": "1",
+      "varName": "image",
+      "channel": "0",
+      "varName2": "",
+      "message": "${member} Congratulations Level up to ${tempVars(\"newlevel\")}!",
+      "name": "Send Image"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "info": "4",
+      "storage": "1",
+      "varName2": "s",
+      "name": "Store Channel Info"
+    },
+    {
+      "storage": "1",
+      "varName": "s",
+      "info": "0",
+      "storage2": "1",
+      "varName2": "a",
+      "name": "Store Attachment Info"
+    },
+    {
+      "title": "Level Up ${tempVars(\"username\")}",
+      "author": "",
+      "color": "RANDOM",
+      "timestamp": "false",
+      "url": "",
+      "authorIcon": "",
+      "imageUrl": "${tempVars(\"a\")}",
+      "thumbUrl": "",
+      "storage": "1",
+      "varName": "emb",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "emb",
+      "message": "${tempVars(\"memo\")} Has Been Leveled Up to ${tempVars(\"newlevel\")}",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "emb",
+      "channel": "6",
+      "varName2": "rankchn",
+      "name": "Send Embed Message"
+    },
+    {
+      "time": "5",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "storage": "1",
+      "varName": "s",
+      "name": "Delete Message"
+    }
+  ],
+  "comType": "3",
+  "_timeRestriction": 40
+}
