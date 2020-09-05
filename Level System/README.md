@@ -14,3 +14,5 @@ https://cdn.discordapp.com/attachments/751738111851102209/751738152732983356/unk
 Resources Folder Is A Folder That Exist in Bot Folder Which Stores Images.
 <br>`4.png` Should Be Downloaded and Added to Resources Folder<br><br><br>
 # Fonts
+Fonts Folder Is A Folder In Bot Folder Which Stores Fonts.
+<br>`Areal.png`and `Areal.fnt` Should Be Downloaded and Added to Fonst Folder
